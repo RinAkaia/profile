@@ -1,19 +1,25 @@
 {
-    "calva.replConnectSequences": [
-        {
-            "name": "Leiningen -> shadow-cljs",
-            "projectType": "lein-shadow",
-            "cljsType": "shadow-cljs",
-            "menuSelections": {
-                "leinAlias": null,
-                "leinProfiles": [
-                    "dev"
-                ],
-                "cljsLaunchBuilds": [
-                    "app"
-                ],
-                "cljsDefaultBuild": "app"
-            }
-        }
-    ]
+  "calva.replConnectSequences": [
+    {
+      "name": "Leiningen -> shadow-cljs",
+      "projectType": "lein-shadow",
+      "cljsType": "shadow-cljs",
+      "menuSelections": {
+        "leinAlias": null,
+        "leinProfiles": [
+          "dev"
+        ],
+        "cljsLaunchBuilds": [
+          "app"
+        ],
+        "cljsDefaultBuild": "app"
+      }
+    }
+  ],
+  "files.exclude": {
+    ".calva": true,
+    ".calva/output-window": true,
+    ".calva/output-window/output.calva-repl": true,
+    ".shadow-cljs": true
+  }
 }
