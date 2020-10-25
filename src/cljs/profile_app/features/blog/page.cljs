@@ -1,12 +1,12 @@
-(ns profile-app.pages
+(ns profile-app.features.blog.page
   (:require
    [re-frame.core :as re-frame]
 
    [profile-app.core.subs :as subs]))
 
-(defn blog []
+(defn page []
   [:div
-   [:h1 "This is the Blog Page."]
+   [:h1 "This is the Blog Page.."]
 
    [:div
     [:a {:href "#/profile"} "go to Profile Page"]]])

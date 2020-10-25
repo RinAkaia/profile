@@ -1,11 +1,11 @@
-(ns profile-app.pages
+(ns profile-app.features.profile.page
   (:require
    [re-frame.core :as re-frame]
    [reagent-material-ui.components :as mui]
 
    [profile-app.core.subs :as subs]))
 
-(defn profile []
+(defn page []
   (let [firstname (re-frame/subscribe [::subs/firstname])
         secondname (re-frame/subscribe [::subs/secondname])]
 
