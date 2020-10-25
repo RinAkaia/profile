@@ -12,7 +12,9 @@
     [:div
      [:h1 (str "Hello from " @firstname " " @secondname ".")]
 
-     [mui/button {:color :primary :variant :contained} "I love Lisp"]
+     [:h2 "The app is under construction"]
+
+     [mui/button {:color :primary :variant :contained} "Test"]
 
      [:div
       [:br]
