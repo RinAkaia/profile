@@ -7,16 +7,16 @@
    [profile-app.core.routes :as routes]
    [profile-app.core.subs :as subs]
    [profile-app.core.config :as config]
-   [profile-app.features.profile.page :as profile]
-   [profile-app.features.blog.page :as blog]))
+   [profile-app.features.profile.page :as profile-page]
+   [profile-app.features.blog.page :as blog-page]))
 
 (defn dev-setup []
   (when config/debug? (println "dev mode")))
 
 (defn- show-page [page-name]
   (case page-name
-    :profile [profile/page]
-    :blog [blog/page]
+    :profile [profile-page/view]
+    :blog [blog-page/view]
     [:div]))
 
 (defn root []

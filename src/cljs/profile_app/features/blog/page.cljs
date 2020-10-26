@@ -4,7 +4,7 @@
 
    [profile-app.core.subs :as subs]))
 
-(defn page []
+(defn view []
   [:div
    [:h1 "This is the Blog Page.."]
 

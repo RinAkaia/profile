@@ -3,6 +3,7 @@
 /target/
 /*-init.clj
 /*.log
+.DS_Store
 
 # Leiningen
 /.lein-*
@@ -18,3 +19,4 @@
 # clj-kondo cache
 /.clj-kondo/.cache
 /.calva
+/resources/public/assets/*.jpeg
