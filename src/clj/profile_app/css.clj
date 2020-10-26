@@ -2,7 +2,8 @@
   (:require [garden.def :refer [defstyles]]))
 
 (defstyles screen
-  [:body {:color :#ffffff
+  [:body {:height :100%
+          :color :#ffffff
           :background-color :#1A222C}]
 
   [:main {:display :flex}]
