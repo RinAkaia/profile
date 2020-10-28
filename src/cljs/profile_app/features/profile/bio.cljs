@@ -1,18 +1,18 @@
 (ns profile-app.features.profile.bio
   (:require
-   [re-frame.core :as re-frame]
+   [re-frame.core :as rf]
    [reagent-material-ui.components :as mui]
 
    [profile-app.core.subs :as subs]))
 
 (defn- short-info []
-  (let [bio (re-frame/subscribe [::subs/bio])]
+  (let [bio (rf/subscribe [::subs/bio])]
     (map-indexed
      (fn [index item] [:p {:key index} (str item)]) @bio)))
 
 (defn view []
-  (let [firstname (re-frame/subscribe [::subs/firstname])
-        secondname (re-frame/subscribe [::subs/secondname])]
+  (let [firstname (rf/subscribe [::subs/firstname])
+        secondname (rf/subscribe [::subs/secondname])]
 
     [mui/card {:className "bio-card"}
      [mui/card-media {:className "media"

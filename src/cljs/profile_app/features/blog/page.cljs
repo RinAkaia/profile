@@ -1,6 +1,6 @@
 (ns profile-app.features.blog.page
   (:require
-   [re-frame.core :as re-frame]
+   [re-frame.core :as rf]
 
    [profile-app.core.subs :as subs]))
 

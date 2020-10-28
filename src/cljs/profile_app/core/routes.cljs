@@ -5,7 +5,7 @@
   (:require
    [secretary.core :as secretary]
    [goog.events :as gevents]
-   [re-frame.core :as re-frame]
+   [re-frame.core :as rf]
 
    [profile-app.core.events :as events]))
 
@@ -24,12 +24,12 @@
   ;; define routes here
 
   (defroute "/" []
-    (re-frame/dispatch [::events/set-active-page :profile]))
+    (rf/dispatch [::events/set-active-page :profile]))
 
   (defroute "/profile" []
-    (re-frame/dispatch [::events/set-active-page :profile]))
+    (rf/dispatch [::events/set-active-page :profile]))
 
   (defroute "/blog" []
-    (re-frame/dispatch [::events/set-active-page :blog]))
+    (rf/dispatch [::events/set-active-page :blog]))
 
   (hook-browser-navigation!))

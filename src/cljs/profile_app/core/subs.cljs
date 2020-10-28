@@ -1,9 +1,9 @@
 (ns profile-app.core.subs
   (:require
-   [re-frame.core :as re-frame]))
+   [re-frame.core :as rf]))
 
-(re-frame/reg-sub ::active-page (fn [db _] (:active-page db)))
+(rf/reg-sub ::active-page (fn [db _] (:active-page db)))
 
-(re-frame/reg-sub ::firstname (fn [db] (:firstname db)))
-(re-frame/reg-sub ::secondname (fn [db] (:secondname db)))
-(re-frame/reg-sub ::bio (fn [db] (:bio db)))
+(rf/reg-sub ::firstname (fn [db] (:firstname db)))
+(rf/reg-sub ::secondname (fn [db] (:secondname db)))
+(rf/reg-sub ::bio (fn [db] (:bio db)))
