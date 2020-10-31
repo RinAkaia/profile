@@ -1,7 +1,7 @@
 body {
   height: 100%;
   color: #ffffff;
-  background-color: #1A222C;
+  background-color: #000000;
 }
 
 main {
@@ -15,9 +15,9 @@ section {
 }
 
 .bio-card.MuiCard-root {
-  width: 320px;
-  min-width: 320px;
-  background-color: #2c3e50;
+  width: 260px;
+  min-width: 260px;
+  background-color: #121212;
 }
 
 .bio-card.MuiCard-root * {
@@ -25,5 +25,13 @@ section {
 }
 
 .bio-card.MuiCard-root .media {
-  height: 480px;
+  height: 320px;
+}
+
+.MuiPaper-root {
+  background-color: #121212;
+}
+
+.MuiChip-root {
+  background-color: #212121;
 }

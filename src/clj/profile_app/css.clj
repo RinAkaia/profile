@@ -4,7 +4,7 @@
 (defstyles screen
   [:body {:height :100%
           :color :#ffffff
-          :background-color :#1A222C}]
+          :background-color :#000000}]
 
   [:main {:display :flex}]
 
@@ -13,10 +13,14 @@
              :padding :24px}]
 
 
-  [:.bio-card.MuiCard-root {:width :320px
-                            :min-width :320px
-                            :background-color :#2c3e50}
+  [:.bio-card.MuiCard-root {:width :260px
+                            :min-width :260px
+                            :background-color :#121212}
 
    [:* {:color :#ffffff}]
 
-   [:.media {:height "480px"}]])
+   [:.media {:height "320px"}]]
+
+  [:.MuiPaper-root {:background-color :#121212}]
+
+  [:.MuiChip-root {:background-color :#212121}])
