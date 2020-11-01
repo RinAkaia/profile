@@ -33,11 +33,16 @@
 
   :garden
   {:builds
-   [{:id           "screen"
+   [{:id "screen"
      :source-paths ["src/clj"]
      :stylesheet   profile-app.css/screen
      :compiler     {:output-to     "resources/public/css/screen.css"
-                    :pretty-print? true}}]}
+                    :pretty-print? true}}
+
+    {:id "devtools"
+     :source-paths ["src/clj"]
+     :stylesheet profile-app.css/devtools
+     :compiler {:output-to "resources/public/css/devtools.css"}}]}
 
 
   :shadow-cljs

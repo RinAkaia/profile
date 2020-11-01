@@ -14,10 +14,13 @@ section {
   padding: 24px;
 }
 
+.MuiPaper-root, .MuiCard-root {
+  background-color: #121212!important;
+}
+
 .bio-card.MuiCard-root {
   width: 260px;
   min-width: 260px;
-  background-color: #121212;
 }
 
 .bio-card.MuiCard-root * {
@@ -26,10 +29,6 @@ section {
 
 .bio-card.MuiCard-root .media {
   height: 320px;
-}
-
-.MuiPaper-root {
-  background-color: #121212;
 }
 
 .MuiChip-root {
