@@ -2,7 +2,6 @@
   (:require
    [re-frame.core :as rf]
    [reagent-material-ui.components :as mui]
-
    [profile-app.core.subs :as subs]))
 
 (defn- short-info []

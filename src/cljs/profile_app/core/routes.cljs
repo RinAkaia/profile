@@ -1,16 +1,14 @@
 (ns profile-app.core.routes
   (:require-macros [secretary.core :refer [defroute]])
   (:import [goog History] [goog.history EventType])
+  (:require [secretary.core :as secretary]
+            [goog.events :as gevents]
+            [re-frame.core :as rf]
+            [profile-app.core.events :as events]
+            [profile-app.views.showcase :as showcase]
+            [profile-app.views.feed :as feed]))
 
-  (:require
-   [secretary.core :as secretary]
-   [goog.events :as gevents]
-   [re-frame.core :as rf]
-
-   [profile-app.core.events :as events]))
-
-
-(defn hook-browser-navigation! []
+(defn- hook-browser-navigation! []
   (doto (History.)
 
     (gevents/listen EventType/NAVIGATE
@@ -18,18 +16,25 @@
 
     (.setEnabled true)))
 
-
-(defn app-routes []
+(defn subscribe []
   (secretary/set-config! :prefix "#")
   ;; define routes here
 
   (defroute "/" []
-    (rf/dispatch [::events/set-active-page :profile]))
+    (rf/dispatch [::events/activate-route :showcase]))
 
-  (defroute "/profile" []
-    (rf/dispatch [::events/set-active-page :profile]))
+  (defroute "/showcase" []
+    (rf/dispatch [::events/activate-route :showcase]))
 
-  (defroute "/blog" []
-    (rf/dispatch [::events/set-active-page :blog]))
+  (defroute "/feed" []
+    (rf/dispatch [::events/activate-route :feed]))
 
   (hook-browser-navigation!))
+
+(defn resolve-route [view-id]
+  (println "view id:" view-id)
+
+  (case view-id
+    :showcase [showcase/view]
+    :feed [feed/view]
+    [:div {} "Error 404"]))

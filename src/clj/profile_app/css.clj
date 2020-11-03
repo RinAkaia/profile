@@ -3,6 +3,7 @@
 
 (defstyles screen
   [:body {:height :100%
+          :font-family :Roboto
           :color :#ffffff
           :background-color :#000000}]
 
