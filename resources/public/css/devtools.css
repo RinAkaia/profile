@@ -3,13 +3,13 @@
 }
 
 #--re-frame-10x-- .panel-content, #--re-frame-10x-- .panel-content-tabs {
-  background-color: #121212!important;
+  background-color: #161b22!important;
 }
 
 #--re-frame-10x-- pre, #--re-frame-10x-- .code-fragment, #--re-frame-10x-- .code-fragment .rc-h-box .rc-box, #--re-frame-10x-- .app-db-path--header, #--re-frame-10x-- .app-db-path--path-header, #--re-frame-10x-- .app-db-path--path-header .form-control {
-  background-color: #212121!important;
+  background-color: #21262d!important;
 }
 
 #--re-frame-10x-- .app-db-path--path-header .form-control {
-  color: #ffffff;
+  color: #c9d1d9;
 }
