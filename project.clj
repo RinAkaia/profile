@@ -12,9 +12,10 @@
    [re-frame "1.1.1"]
    [day8.re-frame/tracing "0.6.0"]
    [clj-commons/secretary "1.2.4"]
+   [arttuka/reagent-material-ui "4.11.0-3"]
+  [clj-commons/cljss "1.6.4"]
    [garden "1.3.10"]
-   [ns-tracker "0.4.0"]
-   [arttuka/reagent-material-ui "4.11.0-3"]]
+   [ns-tracker "0.4.0"]]
 
 
   :plugins [[lein-shadow "0.3.1"]
