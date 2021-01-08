@@ -12,11 +12,8 @@
 # Node.js dependencies
 /node_modules/
 
-# shadow-cljs cache, port files
 /shadow-cljs.edn
 /.shadow-cljs/
-
-# clj-kondo cache
 /.clj-kondo/.cache
 /.calva
 /resources/public/assets/*.jpeg
