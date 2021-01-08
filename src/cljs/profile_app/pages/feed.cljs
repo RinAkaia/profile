@@ -1,8 +1,6 @@
 (ns profile-app.pages.feed
   (:require
-   [re-frame.core :as rf]
-   [reagent-material-ui.components :as mui]
-   [profile-app.core.subs :as subs]))
+   [reagent-material-ui.components :as mui]))
 
 (defn view []
   [:div
