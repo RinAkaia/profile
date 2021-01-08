@@ -12,25 +12,21 @@
    [re-frame "1.1.1"]
    [day8.re-frame/tracing "0.6.0"]
    [clj-commons/secretary "1.2.4"]
-   [arttuka/reagent-material-ui "4.11.0-3"]
-  [clj-commons/cljss "1.6.4"]
+   [arttuka/reagent-material-ui "4.11.2-0"]
+   [clj-commons/cljss "1.6.4"]
    [garden "1.3.10"]
    [ns-tracker "0.4.0"]]
-
 
   :plugins [[lein-shadow "0.3.1"]
             [lein-garden "0.3.0"]
             [lein-shell "0.5.0"]]
 
-
   :min-lein-version "2.9.0"
   :source-paths ["src/clj" "src/cljs"]
-
 
   :clean-targets
   ^{:protect false} ["resources/public/js/compiled" "target"
                      "resources/public/css"]
-
 
   :garden
   {:builds
@@ -44,7 +40,6 @@
      :source-paths ["src/clj"]
      :stylesheet profile-app.css/devtools
      :compiler {:output-to "resources/public/css/devtools.css"}}]}
-
 
   :shadow-cljs
   {:nrepl {:port 8777}
@@ -70,7 +65,6 @@
      :devtools {:http-root "resources/public"
                 :http-port 8280}}}}
 
-
   :shell
   {:commands
    {"karma" {:windows         ["cmd" "/c" "karma"]
@@ -79,7 +73,6 @@
     "open"  {:windows         ["cmd" "/c" "start"]
              :macosx          "open"
              :linux           "xdg-open"}}}
-
 
   :aliases
   {"dev"
@@ -116,7 +109,6 @@
     ["shadow" "compile" "karma-test"]
     ["shell" "karma" "start" "--single-run" "--reporters" "junit,dots"]]}
 
-
   :profiles
   {:dev
    {:dependencies [[binaryage/devtools "1.0.2"]
@@ -125,6 +117,5 @@
     :source-paths ["dev"]}
 
    :prod {}}
-
 
   :prep-tasks [["garden" "once"]])
