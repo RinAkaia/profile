@@ -5,7 +5,8 @@
    [profile-app.core.events :as events]
    [profile-app.core.routes :as routes]
    [profile-app.core.subs :as subs]
-   [profile-app.core.config :as config]))
+   [profile-app.core.config :as config]
+   :reload-all))
 
 (defn dev-setup []
   (when config/debug? (println "You are in dev mode")))

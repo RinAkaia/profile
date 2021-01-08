@@ -1,15 +1,13 @@
-(ns profile-app.views.showcase
+(ns profile-app.pages.showcase
   (:require
    [re-frame.core :as rf]
    [reagent-material-ui.components :as mui]
    [profile-app.core.events :as events]
-   [profile-app.features.profile.bio :as bio]))
-
-;; (defn- show-feed [] (rf/dispatch [::events/activate-route :feed]))
+   [profile-app.ui.organisms :as organisms]))
 
 (defn view []
   [:main
-   [bio/view]
+   [organisms/bio]
 
    [:section
     [:h2 "The app is under construction"]
