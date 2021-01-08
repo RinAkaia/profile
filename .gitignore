@@ -20,3 +20,4 @@
 /.clj-kondo/.cache
 /.calva
 /resources/public/assets/*.jpeg
+.lsp
