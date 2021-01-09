@@ -1,11 +1,12 @@
 (ns profile-app.ui.atoms
-  (:require [cljss.reagent :refer-macros [defstyled]]))
+  (:require [cljss.core :refer-macros [defstyles]]))
 
-(defstyled wrapper :div
-  {:padding :16px
-   :margin-bottom :5px})
+(defstyles styles []
+  {:padding "16px"
+   :margin-bottom "5px"})
 
 (defn avatar "An avatar atom"
   [{:keys [url]}]
 
-  (wrapper [:img {:src url}]))
+  [:img {:class (styles)
+         :src url}])

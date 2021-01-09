@@ -5,7 +5,7 @@
    [profile-app.core.subs :as subs]
    [profile-app.ui.atoms :as atoms]))
 
-;; TODO: Separate data and view
+;; TODO: Separate data and view!
 
 (defn- short-info []
   (let [bio (rf/subscribe [::subs/bio])]
