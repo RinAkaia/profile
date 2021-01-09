@@ -1,4 +1,4 @@
-(ns profile-app.core.routes
+(ns profile-app.core.routing
   (:require-macros [secretary.core :refer [defroute]])
   (:import [goog History] [goog.history EventType])
   (:require [secretary.core :as secretary]
@@ -31,7 +31,7 @@
 
   (hook-browser-navigation!))
 
-(defn resolve-route [view-id]
+(defn resolver [view-id]
   (case view-id
     :showcase [showcase/view]
     :feed [feed/view]
