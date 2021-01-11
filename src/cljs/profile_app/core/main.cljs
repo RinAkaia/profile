@@ -1,6 +1,5 @@
 (ns profile-app.core.main
   (:require
-   [devtools.core :as devtools]
    [reagent.dom :as rdom]
    [re-frame.core :as rf]
    [profile-app.core.events :as events]
@@ -12,8 +11,8 @@
 (defn dev-setup "Development environment setup" []
   (when config/debug?
     (println "Dev environment mode activated.")
-    (devtools/set-pref! :cljs-land-style config/formatters-style)
-    (devtools/install!)))
+    (require '[profile-app.lib.devtools :as devtools])
+    (devtools/setup)))
 
 (defn root "Application root component" []
   (let [active-route (rf/subscribe [::subs/active-route])]

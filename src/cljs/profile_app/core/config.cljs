@@ -1,9 +1,5 @@
-(ns profile-app.core.config
-  (:require [devtools.core :as devtools]))
+(ns profile-app.core.config)
 
-(def debug?
-  ^boolean goog.DEBUG)
+(def debug? ^boolean goog.DEBUG)
 
-(def formatters-style
-  (let [{:keys [cljs-land-style]} (devtools/get-prefs)]
-    (str "filter:invert(90%);" cljs-land-style)))
+(def formatters-style "filter:invert(90%);")
