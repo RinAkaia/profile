@@ -55,12 +55,13 @@
                                 day8.re-frame-10x.preload]}}
 
      :dev {:compiler-options
-           {:closure-defines {re-frame.trace.trace-enabled? true
+           {:closure-defines {goog.DEBUG true
+                              re-frame.trace.trace-enabled? true
                               day8.re-frame.tracing.trace-enabled? true}}}
 
      :release {:build-options
-               {:ns-aliases
-                {day8.re-frame.tracing day8.re-frame.tracing-stubs}}}
+               {:closure-defines {goog.DEBUG false}
+                :ns-aliases {day8.re-frame.tracing day8.re-frame.tracing-stubs}}}
 
      :devtools {:http-root "resources/public"
                 :http-port 8280}}}}
@@ -75,20 +76,9 @@
              :linux           "xdg-open"}}}
 
   :aliases
-  {"dev"
-
-   ["do"
-    ["shell" "echo" "\"DEPRECATED: Please use lein watch instead.\""]
-    ["watch"]]
-
-   "watch"
+  {"watch"
    ["with-profile" "dev" "do"
     ["shadow" "watch" "app" "browser-test" "karma-test"]]
-
-   "prod"
-   ["do"
-    ["shell" "echo" "\"DEPRECATED: Please use lein release instead.\""]
-    ["release"]]
 
    "release"
    ["with-profile" "prod" "do"
@@ -116,6 +106,7 @@
 
     :source-paths ["dev"]}
 
-   :prod {}}
+   :prod
+   {}}
 
   :prep-tasks [["garden" "once"]])
