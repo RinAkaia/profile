@@ -1,8 +1,6 @@
 (ns profile-app.pages.showcase
   (:require
-   [re-frame.core :as rf]
    [reagent-material-ui.components :as mui]
-   [profile-app.core.events :as events]
    [profile-app.ui.organisms :as organisms]))
 
 (defn view []
