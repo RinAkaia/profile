@@ -11,8 +11,8 @@
 (defn dev-setup "Development environment setup" []
   (when config/debug?
     (println "Dev environment mode activated.")
-    (require '[profile-app.lib.devtools :as devtools])
-    (devtools/setup)))
+    #_(require '[profile-app.lib.devtools :as devtools])
+    #_(devtools/setup)))
 
 (defn root "Application root component" []
   (let [active-route (rf/subscribe [::subs/active-route])]
