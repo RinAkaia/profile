@@ -3,10 +3,10 @@
 (def default-db
   {:active-route :showcase
 
-   :firstname "Karina"
-   :secondname "Drummer"
+   :firstname "Rin"
+   :secondname "Akaia"
 
    :bio ["( 🦊 👩🏻‍💻 🏳️‍🌈 )"
          "Totally fox-obsessed polymath"
          "Working in software development"
-         "The owner of https://t.me/TheFoxNews"]})
+         "The owner of https://t.me/TrueFoxNews"]})
